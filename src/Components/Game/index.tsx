@@ -17,19 +17,20 @@ function shuffleCards(cards: typeof cardDetails) {
   }
   return cards;
 }
-function checkIsFlipped(id: any) {
-  let a = true
-  a = !a
-  return a
-} 
+
 const Game = () => {
   const [cards, setCards] = useState(() =>
     shuffleCards(cardDetails.concat(cardDetails))
   );
-  console.log(cards, "cards");
 
-  const [openCards, setOpenCards] = useState([]);
+  const [openCards, setOpenCards] = useState<number[]>([]);
+  const checkIsFliped = (index:number) => {
+    return openCards.includes(index)
+  }
   const [state, setState] = useState(false);
+  const handleClickOpen = (index: number) => {
+    setOpenCards([index]);
+  };
   
   return (
     <div className="block">
@@ -42,8 +43,8 @@ const Game = () => {
           <Card
             cardImg={card.image}
             key={index}
-            isFlipped={state}
-            onClick={() => setState(!state)}
+            isFlipped={checkIsFliped(card.id)}
+            onClick={() => handleClickOpen(card.id)}
             />
         ))} 
       </div>

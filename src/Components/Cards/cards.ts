@@ -1,31 +1,31 @@
 export const cardDetails = [
   {
-    id: Math.floor(Math.random() * 10),
+    id: 1,
     type: "Armenia",
     image: require(`../../images/Armenia.png`),
   },
   {
-    id: Math.random(),
+    id: 2,
     type: "Russia",
     image: require(`../../images/Russia.png`),
   },
   {
-    id: Math.random(),
+    id: 3,
     type: "Brazil",
     image: require(`../../images/Brazil.png`),
   },
   {
-    id: Math.random(),
+    id: 4,
     type: "France",
     image: require(`../../images/France.png`),
   },
   {
-    id: Math.random(),
+    id: 5,
     type: "Spain",
     image: require(`../../images/Spain.png`),
   },
   {
-    id: Math.random(),
+    id:6,
     type: "Britain",
     image: require(`../../images/Britain.png`),
   },

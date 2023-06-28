@@ -1,4 +1,5 @@
 .cards {
+
   cursor: pointer;
   img {
     cursor: pointer;
@@ -10,6 +11,8 @@
   .card-face {
     position: absolute;
     backface-visibility: hidden;
+    transition: 0.3s;
+    transform-style: preserve-3d;
     &.card-back-face {
       background-color: white;
     }
