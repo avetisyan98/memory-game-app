@@ -1,0 +1,15 @@
+.block {
+    text-align: center;
+}
+.gameContainer {
+    border: 1px solid #DEDEDE;
+    padding: 12px;
+    box-shadow: 0 0 4px 4px #DEDEDE; 
+    max-width: 720px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 10px; /* Adjust the gap between cards as needed */
+    height: 500px;
+    margin: 0 auto;
+}
