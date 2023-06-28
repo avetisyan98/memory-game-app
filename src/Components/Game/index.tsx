@@ -10,6 +10,7 @@ interface IProps {
     image: any;
   };
 }
+
 function shuffleCards(cards: typeof cardDetails) {
   for (let i = cards.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
@@ -29,7 +30,12 @@ const Game = () => {
   }
   const [state, setState] = useState(false);
   const handleClickOpen = (index: number) => {
-    setOpenCards([index]);
+    if(openCards.length === 1) {
+      setOpenCards((prev) => 
+      [...prev, index]);
+    } else {
+      setOpenCards([index]);
+    }
   };
   
   return (
@@ -43,8 +49,8 @@ const Game = () => {
           <Card
             cardImg={card.image}
             key={index}
-            isFlipped={checkIsFliped(card.id)}
-            onClick={() => handleClickOpen(card.id)}
+            isFlipped={checkIsFliped(index)}
+            onClick={() => handleClickOpen(index)}
             />
         ))} 
       </div>
