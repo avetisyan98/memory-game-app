@@ -3,7 +3,7 @@ import "./style.scss";
 import Card from "../Cards/Card";
 import { cardDetails } from "../Cards/cards";
 import { SuccessModal } from "../SuccessModal";
-
+import { Button } from "@mui/material";
 function shuffleCards(cards: typeof cardDetails) {
   for (let i = cards.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
@@ -96,6 +96,7 @@ export const Game = () => {
       </div>
       <p className="movie"> Move : {move}</p>
       {localStorage.getItem("bestScore") && <p> BestScore : {bestScore}</p>}
+      <div><Button variant="contained" onClick={restartGame}>Restart Game</Button></div>
       <SuccessModal
         open={modalState}
         move={move}
