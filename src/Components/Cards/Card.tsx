@@ -16,8 +16,8 @@ export const Card: FC<IProps> = ({
   isInactive,
 }) => {
   return (
-    <div className={"cards"} onClick={onClick}>
-      <div className={classnames("card-inner",  {"is-inactive": isInactive})}>
+    // <div className={"cards"} >
+      <div className={classnames("cards",  {"is-inactive": isInactive})} onClick={onClick}>
         <div className={classnames("card-face card-font-face")}>
           <img src={cardImg} />
         </div>
@@ -29,7 +29,7 @@ export const Card: FC<IProps> = ({
           <img src={question} />
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
