@@ -1,12 +1,9 @@
 .cards {
-
   cursor: pointer;
   img {
     cursor: pointer;
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-        rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    }
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   .card-face {
     position: absolute;
@@ -24,8 +21,7 @@
   .is-flipped {
     transform: rotateY(180deg);
   }
-
-  // .card-font-face {
-  //   background-color: white;
-  // }
+  .is-inactive {
+    visibility: hidden;
+  }
 }

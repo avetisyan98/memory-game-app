@@ -5,13 +5,19 @@ import question from "../../images/question.png";
 interface IProps {
   cardImg: string;
   isFlipped: boolean;
+  isInactive: boolean;
   onClick: () => void;
 }
 
-export const Card: FC<IProps> = ({ onClick, cardImg, isFlipped }) => {
+export const Card: FC<IProps> = ({
+  onClick,
+  cardImg,
+  isFlipped,
+  isInactive,
+}) => {
   return (
     <div className={"cards"} onClick={onClick}>
-      <div className="card-inner">
+      <div className={classnames("card-inner",  {"is-inactive": isInactive})}>
         <div className={classnames("card-face card-font-face")}>
           <img src={cardImg} />
         </div>
