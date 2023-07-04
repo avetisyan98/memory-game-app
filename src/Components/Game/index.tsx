@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./style.scss";
-import Card from "../Cards/Card";
+import Card from "../Cards";
 import { cardDetails } from "../Cards/cards";
 import { SuccessModal } from "../SuccessModal";
 import { Button } from "@mui/material";
