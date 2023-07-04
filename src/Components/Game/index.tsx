@@ -30,7 +30,6 @@ export const Game = () => {
     if (cards.length === clearedCards.length) {
       setModalState(true);
       if (bestScore !== null && move < bestScore) {
-        console.log(123123123);
         setBestScore(move);
         localStorage.setItem("bestScore", "" + move);
       }
@@ -92,7 +91,6 @@ export const Game = () => {
             key={index}
             isFlipped={checkIsFliped(index)}
             isInactive={checkIsInactive(index)}
-            isDisabled={disableCards}
             onClick={() => handleClickOpen(index)}
           />
         ))}

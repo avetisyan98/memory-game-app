@@ -6,7 +6,6 @@ interface IProps {
   cardImg: string;
   isFlipped: boolean;
   isInactive: boolean;
-  isDisabled: boolean;
   onClick: () => void;
 }
 
@@ -20,20 +19,21 @@ export const Card: FC<IProps> = ({
     !isFlipped && onClick();
   }
   return (
-    // <div className={"cards"} >
-      <div className={classnames("cards",  {"is-inactive": isInactive})} onClick={handleClick}>
-        <div className={classnames("card-face card-font-face")}>
-          <img src={cardImg} />
-        </div>
-        <div
-          className={classnames("card-face card-back-face", {
-            "is-flipped": isFlipped,
-          })}
-        >
-          <img src={question} />
-        </div>
+    <div
+      className={classnames("cards", { "is-inactive": isInactive })}
+      onClick={handleClick}
+    >
+      <div className={classnames("card-face card-font-face")}>
+        <img src={cardImg} />
       </div>
-    // </div>
+      <div
+        className={classnames("card-face card-back-face", {
+          "is-flipped": isFlipped,
+        })}
+      >
+        <img src={question} />
+      </div>
+    </div>
   );
 };
 

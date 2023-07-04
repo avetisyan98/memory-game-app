@@ -21,7 +21,7 @@
   .is-flipped {
     transform: rotateY(180deg);
   }
-  .is-inactive {
-    visibility: hidden;
-  }
+}
+.is-inactive {
+  visibility: hidden;
 }
