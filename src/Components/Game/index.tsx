@@ -19,7 +19,9 @@ export const Game = () => {
   const [openCards, setOpenCards] = useState<number[]>([]);
   const [clearedCards, setClearedCards] = useState<number[]>([]);
   const [modalState, setModalState] = useState(false);
+  const [disableCards, setDisableCards] = useState(false);
   const [move, setMove] = useState(0);
+
   const storedBestScore = localStorage.getItem("bestScore");
   const initialBestScore = storedBestScore !== null ? parseInt(storedBestScore) : Infinity;
   const [bestScore, setBestScore] = useState<number | null>(initialBestScore);
@@ -90,6 +92,7 @@ export const Game = () => {
             key={index}
             isFlipped={checkIsFliped(index)}
             isInactive={checkIsInactive(index)}
+            isDisabled={disableCards}
             onClick={() => handleClickOpen(index)}
           />
         ))}
