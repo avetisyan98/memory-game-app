@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.scss";
 import Card from "../Cards/Card";
 import { cardDetails } from "../Cards/cards";
@@ -19,7 +19,6 @@ export const Game = () => {
   const [openCards, setOpenCards] = useState<number[]>([]);
   const [clearedCards, setClearedCards] = useState<number[]>([]);
   const [modalState, setModalState] = useState(false);
-  const [disableCards, setDisableCards] = useState(false);
   const [move, setMove] = useState(0);
 
   const storedBestScore = localStorage.getItem("bestScore");
